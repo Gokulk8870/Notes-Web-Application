@@ -1,178 +1,42 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
+body{
     font-family: "Bricolage Grotesque", sans-serif;
-    background-color: #1a1a2e;
-    min-height: 100vh;
 }
 
-/* Overlay - fixed so it covers full screen even when scrolled */
-.popup-overlay {
-    background-color: rgba(0, 0, 0, 0.85);
-    position: fixed;
+h1{
+    font-family: "Black Ops One", system-ui;
+}
+.popup-overlay{
+    background-color: black;
+    opacity: 0.8;
+    position: absolute;
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
+    height:100vh;
+    top:0;
+    left:0;
+    z-index: 1;
     display: none;
 }
-
-/* Popup box - fixed and centered */
-.popup-box {
+.popup-box{
     background-color: firebrick;
-    width: 420px;
-    max-width: 92vw;
-    padding: 36px;
-    border-radius: 12px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 200;
+    width: 40%;
+    padding:40px;
+    border-radius: 10px;
+    position: absolute;
+    top:20%;
+    left:30%;
+    z-index: 2;
     display: none;
 }
-
-/* Form inputs */
-.form-control {
+.form-control{
     background: transparent;
     border: none;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+    border-bottom: 2px solid white;
     border-radius: 0;
     color: white;
-    padding-left: 0;
 }
 
-.form-control::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.form-control:focus {
+.form-control:focus{
     background: transparent;
     border-bottom: 2px solid white;
     box-shadow: none;
-    color: white;
-}
-
-/* Main layout */
-.main-wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
-
-.page-title {
-    font-family: "Black Ops One", system-ui;
-    color: #fff;
-    letter-spacing: 2px;
-    border-bottom: 3px solid #dc3545;
-    padding-bottom: 12px;
-    margin-bottom: 30px;
-}
-
-/* Notes grid */
-.notes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 20px;
-}
-
-/* Note card */
-.note-card {
-    background: linear-gradient(135deg, #16213e, #0f3460);
-    border: 1px solid rgba(220, 53, 69, 0.35);
-    border-radius: 12px;
-    padding: 20px 20px 50px 20px;
-    position: relative;
-    transition: transform 0.2s, box-shadow 0.2s;
-    color: #fff;
-    min-height: 140px;
-}
-
-.note-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(220, 53, 69, 0.3);
-}
-
-.note-card .note-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #ff6b6b;
-    margin-bottom: 10px;
-    word-break: break-word;
-}
-
-.note-card .note-content {
-    font-size: 0.9rem;
-    color: #ccc;
-    line-height: 1.6;
-    word-break: break-word;
-    white-space: pre-wrap;
-}
-
-.note-card .note-date {
-    font-size: 0.75rem;
-    color: #888;
-    position: absolute;
-    bottom: 12px;
-    left: 20px;
-}
-
-.note-card .btn-delete {
-    position: absolute;
-    bottom: 8px;
-    right: 14px;
-    background: transparent;
-    border: none;
-    color: #dc3545;
-    font-size: 1rem;
-    cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 6px;
-    transition: background 0.2s, color 0.2s;
-}
-
-.note-card .btn-delete:hover {
-    background: rgba(220, 53, 69, 0.15);
-    color: #ff6b6b;
-}
-
-/* Empty state */
-.empty-state {
-    text-align: center;
-    color: #555;
-    margin-top: 100px;
-    font-size: 1.1rem;
-}
-
-.empty-state i {
-    font-size: 3.5rem;
-    color: #333;
-    display: block;
-    margin-bottom: 14px;
-}
-
-/* Floating add button */
-#add-popup {
-    width: 56px;
-    height: 56px;
-    font-size: 1.3rem;
-    box-shadow: 0 4px 18px rgba(220, 53, 69, 0.55);
-    transition: transform 0.2s;
-}
-
-#add-popup:hover {
-    transform: scale(1.1);
-}
-
-/* Responsive */
-@media (max-width: 576px) {
-    .popup-box {
-        width: 92vw;
-        padding: 24px;
-    }
 }
