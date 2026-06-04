@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Popup overlay -->
+    <div class="popup-overlay" id="popup-overlay"></div>
+
+    <!-- Popup box -->
+    <div class="popup-box" id="popup-box">
+        <h2 class="text-white mb-4">📝 Add Note</h2>
+        <div class="form-group">
+            <input type="text" id="note-title" class="form-control mb-3" placeholder="Title" autocomplete="off">
+            <textarea id="content" class="form-control mb-3" rows="4" placeholder="Content"></textarea>
+            <button type="button" class="btn btn-light me-2" id="add-note">Add</button>
+            <button type="button" class="btn btn-outline-light" id="cancel-note">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-wrapper">
+        <h1 class="page-title text-center">📝 My Notes</h1>
+
+        <!-- Empty state (outside grid) -->
+        <div class="empty-state" id="empty-state" style="display:none;">
+            <i class="fa-regular fa-note-sticky"></i>
+            No notes yet. Click <strong>+</strong> to add one!
+        </div>
+
+        <!-- Notes grid -->
+        <div class="notes-grid" id="notes-grid"></div>
+    </div>
+
+    <!-- Floating add button -->
+    <button id="add-popup" class="btn btn-danger rounded-circle position-fixed bottom-0 end-0 m-4">
+        <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
