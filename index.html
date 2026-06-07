@@ -19,11 +19,11 @@
 </head>
 <body>
     <div class="card">
-        <div class="card-body  w-100 h-100">
+        <div class="container">
            
             <h3 class="title text-center text-dark bg-danger bg-gradient bg-opacity-50 p-3">My Notes</h3>
-            <div class="msg">
-                
+            <div id="note-card">
+               
             </div>
             <div class="add">
                 <div class="popup-overlay"></div>
@@ -33,7 +33,7 @@
                         <div class="form-group">
                             <input type="text" id="note-title" class="form-control mb-3" placeholder="Title">
                             <textarea name="content" id="content" class="form-control mb-3" placeholder="Content"></textarea>
-                            <button class="btn bg-primary m-2" id="add-note">Add</button><button class="btn bg-primary" id="cancel-note">Cancel</button>
+                            <button class="btn bg-primary m-2" id="add-note">Add</button><a href="index.html" class="btn btn-danger">Cancel</a>
                         </div>
                     <!-- </form> -->
                 </div>
