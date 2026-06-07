@@ -29,13 +29,17 @@
                 <div class="popup-overlay"></div>
                 <div class="popup-box">
                     <h2 class="text-white">Add Note...</h2>
-                    <!-- <form action=""> -->
+                    <form action="./index.html" id="noteForm">
                         <div class="form-group">
+                        
                             <input type="text" id="note-title" class="form-control mb-3" placeholder="Title">
                             <textarea name="content" id="content" class="form-control mb-3" placeholder="Content"></textarea>
-                            <button class="btn bg-primary m-2" id="add-note">Add</button><a href="index.html" class="btn btn-danger">Cancel</a>
+                            <button type="button" class="btn bg-primary m-2" id="add-note">Add</button>
+                            <button type="button" class="btn bg-primary m-2" id="update" hidden>Update</button>
+                            <a href="index.html" class="btn btn-danger">Cancel</a>
+                            
                         </div>
-                    <!-- </form> -->
+                    </form>
                 </div>
                  <button id="add-popup" class="btn btn-danger rounded-circle  position-fixed bottom-0 end-0 m-3">
                 <i class="fa-solid fa-plus fa-1x"></i>

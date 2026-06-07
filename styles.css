@@ -66,3 +66,14 @@ h1{
     padding: 10px;
     background-color: #e74c5b;
 }
+.card-body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.btns{
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+}
