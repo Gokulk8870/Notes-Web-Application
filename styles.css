@@ -6,21 +6,45 @@ body {
 h1 {
   font-family: "Black Ops One", system-ui;
 }
+
+#note-card,
+.note-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.note {
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #e74c5b;
+  overflow-y: auto;
+}
+
 .card-body {
   display: flex;
   flex-direction: column;
+  height: 100%;
   gap: 20px;
 }
+
+.btns {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+}
+
 .popup-overlay {
   background: rgba(0, 0, 0, 0.8);
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   z-index: 999;
   display: none;
 }
+
 .popup-box {
   background-color: firebrick;
   width: 40%;
@@ -34,6 +58,7 @@ h1 {
   z-index: 1000;
   display: none;
 }
+
 .form-control {
   background: transparent;
   border: none;
@@ -47,33 +72,39 @@ h1 {
   border-bottom: 2px solid white;
   box-shadow: none;
 }
-.note-card {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+
+@media (max-width: 768px) {
+  .popup-box {
+    width: 70%;
+    padding: 30px;
+  }
+
+  .note {
+    width: 220px;
+  }
 }
 
-#note-card {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+@media (max-width: 576px) {
+  .popup-box {
+    width: 90%;
+    padding: 20px;
+  }
 
-.note {
-  width: 200px;
-  height: 300px;
-  border-radius: 20px;
-  padding: 10px;
-  background-color: #e74c5b;
-}
-.card-body {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
+  .note {
+    width: 100%;
+    min-height: auto;
+  }
 
-.btns {
-  margin-top: auto;
-  display: flex;
-  gap: 10px;
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .btns {
+    flex-direction: column;
+  }
+
+  .btns button {
+    width: 100%;
+  }
 }
