@@ -47,8 +47,8 @@ function display() {
                 <h3>${note.title}</h3>
                 <p >${note.content}</p>
                 <div class="btns">
-                    <button onclick="editnote(${index})" id="editbtn" class="btn btn-primary">Edit</button>
-                    <button onclick="deletenote(${index})"  id="detelebtn" class="btn btn-primary">Delete</button>
+                    <button onclick="editnote(${index})" id="editbtn" class="btn btn-primary"><i class="fa-sharp-duotone fa-solid fa-pen-to-square"></i></button>
+                    <button onclick="deletenote(${index})"  id="detelebtn" class="btn btn-primary"><i class="fa-notdog fa-solid fa-trash"></i></button>
                 </div>
             </div>`;
     });
