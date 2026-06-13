@@ -21,14 +21,15 @@ h1 {
   border-radius: 20px;
   padding: 10px;
   background-color: #e74c5b;
-  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .card-body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  gap: 20px;
 }
 
 .btns {
